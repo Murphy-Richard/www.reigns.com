@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REIGNS | Development Consultancy - Research, Empowerment, Innovation, Growth, Networked Solutions</title>
-    <!-- Tailwind CSS CDN -->
+    <title>REIGNS | Research · Empowerment · Innovation · Growth · Networked Solutions</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script>
         tailwind.config = {
@@ -19,20 +19,23 @@
                 extend: {
                     colors: {
                         gold: {
-                            400: '#E6CA65',
-                            500: '#D4AF37',
-                            600: '#AA8C2C',
-                            700: '#806821'
+                            100: '#FAF4E1',
+                            300: '#E5C880',
+                            400: '#D4AF37',
+                            500: '#C59B27',
+                            600: '#A37E1C',
+                            700: '#806112',
                         },
-                        charcoal: {
-                            800: '#1A1A1A',
-                            900: '#111111',
-                            950: '#0A0A0A'
+                        dark: {
+                            900: '#0B0C0E',
+                            800: '#121418',
+                            700: '#1C1F26',
+                            600: '#2A2E39',
                         }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif']
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
                     }
                 }
             }
@@ -40,853 +43,897 @@
     </script>
     <style>
         .gold-gradient-text {
-            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA8C2C 100%);
+            background: linear-gradient(135deg, #FFF0CA 0%, #D4AF37 50%, #9A7B1C 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-        .gold-gradient-bg {
-            background: linear-gradient(135deg, #D4AF37 0%, #AA8C2C 100%);
         }
         .gold-border-glow {
             box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
         }
-        .glass-dark {
-            background: rgba(17, 17, 17, 0.85);
-            backdrop-filter: blur(12px);
+        .gold-border-glow:hover {
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.3);
         }
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 8px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #111111;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #D4AF37;
-            border-radius: 4px;
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(212, 175, 55, 0.12) 1px, transparent 1px);
+            background-size: 30px 30px;
         }
     </style>
 </head>
-<body class="bg-charcoal-950 text-gray-200 font-sans antialiased selection:bg-gold-500 selection:text-black">
+<body class="bg-dark-900 text-gray-200 font-sans antialiased selection:bg-gold-500 selection:text-black">
 
-    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-dark border-b border-white/10">
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-dark-900/90 backdrop-blur-md border-b border-gold-500/20 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
             <a href="#" class="flex items-center space-x-3 group">
-                <div class="w-10 h-10 rounded-lg gold-gradient-bg flex items-center justify-center font-bold text-black text-xl shadow-lg transform group-hover:scale-105 transition-transform">
-                    R
+                <div class="w-10 h-10 rounded border border-gold-400/60 bg-dark-800 flex items-center justify-center group-hover:border-gold-400 transition-colors">
+                    <span class="font-serif font-bold text-xl text-gold-400">R</span>
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-serif text-2xl font-bold tracking-wider text-white">REIGNS</span>
-                    <span class="text-[10px] uppercase tracking-widest text-gold-400 font-semibold">Development Consultancy</span>
+                    <span class="font-serif font-bold text-2xl tracking-wider text-white group-hover:text-gold-300 transition-colors">REIGNS</span>
+                    <span class="text-[9px] tracking-widest text-gold-400 uppercase font-semibold">Development Consultancy</span>
                 </div>
             </a>
 
-            <!-- Desktop Nav Links -->
-            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
-                <a href="#about" class="text-gray-300 hover:text-gold-400 transition-colors">Who We Are</a>
-                <a href="#engines" class="text-gray-300 hover:text-gold-400 transition-colors">The 4 Engines</a>
-                <a href="#pillars" class="text-gray-300 hover:text-gold-400 transition-colors">Philosophy</a>
-                <a href="#services" class="text-gray-300 hover:text-gold-400 transition-colors">Services</a>
-                <a href="#regenerative" class="text-gray-300 hover:text-gold-400 transition-colors">Regenerative Approach</a>
-                <a href="#partners" class="text-gray-300 hover:text-gold-400 transition-colors">Partners</a>
-            </nav>
-
-            <!-- CTA Button -->
-            <div class="hidden lg:flex items-center space-x-4">
-                <a href="#contact" class="px-5 py-2.5 rounded-md gold-gradient-bg text-black font-semibold text-sm hover:opacity-90 shadow-md transition-all transform hover:-translate-y-0.5">
-                    Partner With Us
-                </a>
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-gold-400 transition-colors">Who We Are</a>
+                <a href="#acronym" class="hover:text-gold-400 transition-colors">Brand Pillars</a>
+                <a href="#engines" class="hover:text-gold-400 transition-colors">The 4 Engines</a>
+                <a href="#services" class="hover:text-gold-400 transition-colors">Service Lines</a>
+                <a href="#regenerative" class="hover:text-gold-400 transition-colors">Regenerative Model</a>
+                <a href="#team" class="hover:text-gold-400 transition-colors">Leadership</a>
             </div>
 
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="lg:hidden text-gray-300 hover:text-gold-400 p-2 focus:outline-none">
+            <!-- Header Action CTA -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <button onclick="openModal('Contact Us')" class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-xs font-semibold uppercase tracking-wider rounded bg-gradient-to-r from-gold-400 to-gold-600 group hover:from-gold-300 hover:to-gold-500 focus:outline-none">
+                    <span class="px-5 py-2.5 transition-all ease-in duration-75 bg-dark-900 rounded-[2px] group-hover:bg-opacity-0 text-white group-hover:text-black">
+                        Engage REIGNS
+                    </span>
+                </button>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="menuBtn" class="lg:hidden text-gray-300 hover:text-gold-400 focus:outline-none">
                 <i class="fa-solid fa-bars text-2xl"></i>
             </button>
         </div>
 
         <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden glass-dark border-b border-white/10 px-6 py-6 space-y-4">
-            <a href="#about" class="block text-gray-200 hover:text-gold-400 font-medium py-1">Who We Are</a>
-            <a href="#engines" class="block text-gray-200 hover:text-gold-400 font-medium py-1">The 4 Engines</a>
-            <a href="#pillars" class="block text-gray-200 hover:text-gold-400 font-medium py-1">Philosophy</a>
-            <a href="#services" class="block text-gray-200 hover:text-gold-400 font-medium py-1">Services</a>
-            <a href="#regenerative" class="block text-gray-200 hover:text-gold-400 font-medium py-1">Regenerative Approach</a>
-            <a href="#partners" class="block text-gray-200 hover:text-gold-400 font-medium py-1">Partners</a>
-            <div class="pt-4">
-                <a href="#contact" class="block text-center w-full py-3 rounded-md gold-gradient-bg text-black font-bold">Partner With Us</a>
+        <div id="mobileMenu" class="hidden lg:hidden bg-dark-800 border-b border-gold-500/20 px-6 py-6 space-y-4">
+            <a href="#about" class="block text-gray-300 hover:text-gold-400 transition-colors">Who We Are</a>
+            <a href="#acronym" class="block text-gray-300 hover:text-gold-400 transition-colors">Brand Pillars</a>
+            <a href="#engines" class="block text-gray-300 hover:text-gold-400 transition-colors">The 4 Engines</a>
+            <a href="#services" class="block text-gray-300 hover:text-gold-400 transition-colors">Service Lines</a>
+            <a href="#regenerative" class="block text-gray-300 hover:text-gold-400 transition-colors">Regenerative Model</a>
+            <a href="#team" class="block text-gray-300 hover:text-gold-400 transition-colors">Leadership</a>
+            <button onclick="openModal('Contact Us')" class="w-full text-center py-3 bg-gold-500 text-black font-semibold rounded uppercase tracking-wider text-xs">
+                Engage REIGNS
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-24 md:pt-44 md:pb-32 overflow-hidden bg-grid-pattern">
+        <!-- Ambient Light Overlay -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-gold-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs uppercase tracking-widest font-semibold">
+                        <i class="fa-solid fa-gem text-xs"></i>
+                        <span>Ghana-Based Premium Development Consultancy</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        We Turn Poverty Into A <span class="gold-gradient-text">Solvable Disconnect.</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        REIGNS operates at the intersection of credible research, human capability, adaptive innovation, and networked delivery systems. We build development solutions that keep generating value long after project cycles close.
+                    </p>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#engines" class="w-full sm:w-auto px-8 py-4 bg-gold-500 hover:bg-gold-400 text-black font-bold text-sm tracking-wider uppercase rounded transition-all duration-300 text-center shadow-lg shadow-gold-500/20">
+                            Explore The 4 Engines
+                        </a>
+                        <button onclick="openModal('Request Proposal')" class="w-full sm:w-auto px-8 py-4 border border-gold-500/50 hover:border-gold-400 text-white font-semibold text-sm tracking-wider uppercase rounded hover:bg-gold-500/10 transition-all duration-300 text-center">
+                            Commission REIGNS
+                        </button>
+                    </div>
+
+                    <div class="pt-8 border-t border-gray-800 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center lg:text-left">
+                        <div>
+                            <p class="font-serif text-2xl font-bold text-gold-400">4 Engines</p>
+                            <p class="text-xs text-gray-400 uppercase tracking-wider">Integrated Firm</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl font-bold text-gold-400">100%</p>
+                            <p class="text-xs text-gray-400 uppercase tracking-wider">Evidence Driven</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl font-bold text-gold-400">Fee-Earning</p>
+                            <p class="text-xs text-gray-400 uppercase tracking-wider">Professional Firm</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl font-bold text-gold-400">Regenerative</p>
+                            <p class="text-xs text-gray-400 uppercase tracking-wider">Impact Design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-gold-500/30 to-gold-700/30 blur-xl"></div>
+                        <div class="relative bg-dark-800 border border-gold-500/30 rounded-2xl p-4 shadow-2xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=80" alt="REIGNS Research & Strategy" class="w-full h-[420px] object-cover rounded-xl filter brightness-90 contrast-105">
+                            <div class="absolute bottom-8 left-8 right-8 p-4 bg-dark-900/90 border border-gold-500/30 rounded-xl backdrop-blur-md">
+                                <p class="text-gold-400 text-xs font-semibold uppercase tracking-widest">Our Strategic Promise</p>
+                                <p class="text-white text-sm font-medium mt-1">"REIGNS is not a vendor called in after the plan is written. REIGNS is the name on the plan."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section class="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden bg-charcoal-950">
-            <!-- Background Decorative Elements -->
-            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:24px_24px]"></div>
-            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/5 border border-gold-500/30 mb-8 backdrop-blur-sm">
-                    <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
-                    <span class="text-xs font-semibold tracking-widest uppercase text-gold-400">Evidence · Capacity · Innovation · Systems</span>
-                </div>
-
-                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold text-white tracking-tight max-w-5xl mx-auto leading-tight mb-6">
-                    We turn poverty into a <span class="gold-gradient-text">solvable disconnect.</span>
-                </h1>
-
-                <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10 font-light leading-relaxed">
-                    REIGNS is a professional development consultancy built to turn rigorous evidence, institutional capability, and adaptive innovation into measurable, long-lasting development outcomes.
-                </p>
-
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-md gold-gradient-bg text-black font-bold text-base hover:opacity-95 shadow-xl transition-all transform hover:-translate-y-1">
-                        Explore Our Services <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
-                    </a>
-                    <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-md bg-white/5 hover:bg-white/10 border border-white/20 text-white font-semibold text-base transition-all">
-                        Partner With Us
-                    </a>
-                </div>
-
-                <!-- Quick Stats / Highlights -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-20 pt-10 border-t border-white/10">
-                    <div class="text-center">
-                        <div class="text-3xl font-bold font-serif gold-gradient-text mb-1">Fee-Earning</div>
-                        <div class="text-xs uppercase tracking-wider text-gray-400">Professional Firm</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold font-serif gold-gradient-text mb-1">4 Engines</div>
-                        <div class="text-xs uppercase tracking-wider text-gray-400">Integrated Capability</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold font-serif gold-gradient-text mb-1">Regenerative</div>
-                        <div class="text-xs uppercase tracking-wider text-gray-400">Sustainable Impact</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold font-serif gold-gradient-text mb-1">Global Standard</div>
-                        <div class="text-xs uppercase tracking-wider text-gray-400">Rooted in Accra, Ghana</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="py-24 bg-charcoal-900 border-t border-white/10 relative">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-6 space-y-6">
-                        <div class="inline-block text-xs uppercase tracking-widest text-gold-400 font-bold px-3 py-1 bg-gold-500/10 border border-gold-500/20 rounded">
-                            Who We Are
-                        </div>
-                        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white leading-snug">
-                            Not an NGO. A professional, fee-earning development partner.
-                        </h2>
-                        <p class="text-gray-300 leading-relaxed font-light">
-                            REIGNS is a Ghana-based development consultancy built to turn evidence, capability, and innovation into measurable development outcomes. We work at the point where research meets implementation — generating credible evidence, strengthening people and institutions, designing practical solutions, and building delivery systems that keep creating value long after a project cycle ends.
-                        </p>
-                        <p class="text-gray-300 leading-relaxed font-light">
-                            We are commissioned by governments, development partners, private organizations, academic institutions, and civil society actors when the work in front of them has to be rigorous, practical, and accountable.
-                        </p>
-                        <div class="p-4 rounded-xl bg-charcoal-950 border-l-4 border-gold-500 italic text-gold-400 text-sm">
-                            "REIGNS is not a vendor called in after the plan is written. REIGNS is the name on the plan."
-                        </div>
-                    </div>
-
-                    <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 hover:border-gold-500/50 transition-all group">
-                            <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400 text-xl mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-bullseye"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-white mb-2">Our Vision</h3>
-                            <p class="text-sm text-gray-400 leading-relaxed">
-                                To become a trusted development partner known for turning evidence, capability, and innovation into durable solutions to poverty and complex exclusion challenges.
-                            </p>
-                        </div>
-
-                        <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 hover:border-gold-500/50 transition-all group">
-                            <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400 text-xl mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-compass"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-white mb-2">Our Mission</h3>
-                            <p class="text-sm text-gray-400 leading-relaxed">
-                                Research, strengthen, innovate, and connect — helping organizations and communities design, deliver, measure, and regenerate lasting value.
-                            </p>
-                        </div>
-
-                        <div class="sm:col-span-2 p-6 rounded-2xl bg-gradient-to-r from-charcoal-950 to-charcoal-800 border border-gold-500/30 flex items-center justify-between">
-                            <div>
-                                <h4 class="text-white font-bold mb-1">Ready to transform your development outcomes?</h4>
-                                <p class="text-xs text-gray-400">Discover how our multi-disciplinary approach drives systemic success.</p>
-                            </div>
-                            <a href="#contact" class="px-4 py-2 rounded bg-gold-500 text-black text-xs font-bold uppercase tracking-wider hover:bg-gold-400 transition-colors">
-                                Consult Us
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="engines" class="py-24 bg-charcoal-950 border-t border-white/10 relative">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs uppercase tracking-widest text-gold-400 font-bold px-3 py-1 bg-gold-500/10 border border-gold-500/20 rounded">
-                        Integrated Capability
-                    </span>
-                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-4 mb-4">
-                        The REIGNS Model — Four Engines, One Firm
-                    </h2>
-                    <p class="text-gray-400 font-light">
-                        Most firms are strong in one lane. REIGNS is built to run four as a single, integrated development consultancy capability from diagnosis to scalable delivery.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Engine 1 -->
-                    <div class="p-8 rounded-2xl bg-charcoal-900 border border-white/10 hover:border-gold-500 transition-all duration-300 flex flex-col justify-between group">
-                        <div>
-                            <div class="w-14 h-14 rounded-xl gold-gradient-bg flex items-center justify-center text-black font-bold text-2xl mb-6 shadow-md group-hover:scale-105 transition-transform">
-                                <i class="fa-solid fa-magnifying-glass-chart"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-3">The Evidence Engine</h3>
-                            <p class="text-sm text-gray-400 leading-relaxed mb-6 font-light">
-                                Research, evaluations, MERL systems, data analysis, diagnostics, learning agendas, and rigorous evidence translation.
-                            </p>
-                        </div>
-                        <div class="pt-4 border-t border-white/10 text-xs text-gold-400 font-semibold tracking-wider uppercase">
-                            Core Diagnostics
-                        </div>
-                    </div>
-
-                    <!-- Engine 2 -->
-                    <div class="p-8 rounded-2xl bg-charcoal-900 border border-white/10 hover:border-gold-500 transition-all duration-300 flex flex-col justify-between group">
-                        <div>
-                            <div class="w-14 h-14 rounded-xl gold-gradient-bg flex items-center justify-center text-black font-bold text-2xl mb-6 shadow-md group-hover:scale-105 transition-transform">
-                                <i class="fa-solid fa-users-gear"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-3">The Empowerment Engine</h3>
-                            <p class="text-sm text-gray-400 leading-relaxed mb-6 font-light">
-                                Capacity development, employability, entrepreneurship, leadership, coaching, mentorship, and deep institutional strengthening.
-                            </p>
-                        </div>
-                        <div class="pt-4 border-t border-white/10 text-xs text-gold-400 font-semibold tracking-wider uppercase">
-                            Enduring Capabilities
-                        </div>
-                    </div>
-
-                    <!-- Engine 3 -->
-                    <div class="p-8 rounded-2xl bg-charcoal-900 border border-white/10 hover:border-gold-500 transition-all duration-300 flex flex-col justify-between group">
-                        <div>
-                            <div class="w-14 h-14 rounded-xl gold-gradient-bg flex items-center justify-center text-black font-bold text-2xl mb-6 shadow-md group-hover:scale-105 transition-transform">
-                                <i class="fa-solid fa-lightbulb"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-3">The Innovation Engine</h3>
-                            <p class="text-sm text-gray-400 leading-relaxed mb-6 font-light">
-                                Human-centred design, technology-enabled approaches, behavioral insights, enterprise solutions, and agile innovation labs.
-                            </p>
-                        </div>
-                        <div class="pt-4 border-t border-white/10 text-xs text-gold-400 font-semibold tracking-wider uppercase">
-                            Adaptive Solutions
-                        </div>
-                    </div>
-
-                    <!-- Engine 4 -->
-                    <div class="p-8 rounded-2xl bg-charcoal-900 border border-white/10 hover:border-gold-500 transition-all duration-300 flex flex-col justify-between group">
-                        <div>
-                            <div class="w-14 h-14 rounded-xl gold-gradient-bg flex items-center justify-center text-black font-bold text-2xl mb-6 shadow-md group-hover:scale-105 transition-transform">
-                                <i class="fa-solid fa-network-wired"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-3">The Networked Delivery Engine</h3>
-                            <p class="text-sm text-gray-400 leading-relaxed mb-6 font-light">
-                                Partnerships, decentralized access models, job and enterprise support systems, knowledge networks, and scalable delivery mechanisms.
-                            </p>
-                        </div>
-                        <div class="pt-4 border-t border-white/10 text-xs text-gold-400 font-semibold tracking-wider uppercase">
-                            Scalable Reach
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="pillars" class="py-24 bg-charcoal-900 border-t border-white/10 relative">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs uppercase tracking-widest text-gold-400 font-bold px-3 py-1 bg-gold-500/10 border border-gold-500/20 rounded">
-                        Operating Philosophy
-                    </span>
-                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-4 mb-4">
-                        What REIGNS Stands For
-                    </h2>
-                    <p class="text-gray-400 font-light">
-                        Six letters, six commitments made to every partner who works with us.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- R -->
-                    <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 hover:border-gold-500 transition-all flex items-start space-x-4">
-                        <div class="w-12 h-12 rounded-xl gold-gradient-bg flex-shrink-0 flex items-center justify-center text-black font-serif font-bold text-2xl shadow">
-                            R
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-bold text-white mb-1">Research</h3>
-                            <p class="text-xs text-gold-400 font-medium mb-2">Evidence-Led Decisions</p>
-                            <p class="text-sm text-gray-400 font-light leading-relaxed">
-                                Generate and apply credible evidence for better policy and implementation decisions.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- E -->
-                    <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 hover:border-gold-500 transition-all flex items-start space-x-4">
-                        <div class="w-12 h-12 rounded-xl gold-gradient-bg flex-shrink-0 flex items-center justify-center text-black font-serif font-bold text-2xl shadow">
-                            E
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-bold text-white mb-1">Empowerment</h3>
-                            <p class="text-xs text-gold-400 font-medium mb-2">Lasting Capabilities</p>
-                            <p class="text-sm text-gray-400 font-light leading-relaxed">
-                                Build people, institutions, and communities with capabilities that endure beyond project cycles.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- I -->
-                    <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 hover:border-gold-500 transition-all flex items-start space-x-4">
-                        <div class="w-12 h-12 rounded-xl gold-gradient-bg flex-shrink-0 flex items-center justify-center text-black font-serif font-bold text-2xl shadow">
-                            I
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-bold text-white mb-1">Innovation</h3>
-                            <p class="text-xs text-gold-400 font-medium mb-2">Practical Solutions</p>
-                            <p class="text-sm text-gray-400 font-light leading-relaxed">
-                                Design practical, adaptive solutions for real-world development problems.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- G -->
-                    <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 hover:border-gold-500 transition-all flex items-start space-x-4">
-                        <div class="w-12 h-12 rounded-xl gold-gradient-bg flex-shrink-0 flex items-center justify-center text-black font-serif font-bold text-2xl shadow">
-                            G
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-bold text-white mb-1">Growth</h3>
-                            <p class="text-xs text-gold-400 font-medium mb-2">Measurable Progress</p>
-                            <p class="text-sm text-gray-400 font-light leading-relaxed">
-                                Translate capability and innovation into measurable, inclusive, and sustainable progress.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- N -->
-                    <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 hover:border-gold-500 transition-all flex items-start space-x-4">
-                        <div class="w-12 h-12 rounded-xl gold-gradient-bg flex-shrink-0 flex items-center justify-center text-black font-serif font-bold text-2xl shadow">
-                            N
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-bold text-white mb-1">Networked</h3>
-                            <p class="text-xs text-gold-400 font-medium mb-2">Connected Ecosystems</p>
-                            <p class="text-sm text-gray-400 font-light leading-relaxed">
-                                Connect people, institutions, markets, knowledge, and delivery systems for maximum leverage.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- S -->
-                    <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 hover:border-gold-500 transition-all flex items-start space-x-4">
-                        <div class="w-12 h-12 rounded-xl gold-gradient-bg flex-shrink-0 flex items-center justify-center text-black font-serif font-bold text-2xl shadow">
-                            S
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-bold text-white mb-1">Solutions</h3>
-                            <p class="text-xs text-gold-400 font-medium mb-2">Impact Beyond Activities</p>
-                            <p class="text-sm text-gray-400 font-light leading-relaxed">
-                                Move beyond routine activities to solutions that respond to defined problems and tangible outcomes.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="py-24 bg-charcoal-950 border-t border-white/10 relative">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs uppercase tracking-widest text-gold-400 font-bold px-3 py-1 bg-gold-500/10 border border-gold-500/20 rounded">
-                        Professional Practice Areas
-                    </span>
-                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-4 mb-4">
-                        Our Comprehensive Service Lines
-                    </h2>
-                    <p class="text-gray-400 font-light">
-                        Explore our specialized consultancy lines designed to drive rigorous evidence, institutional capacity, and systemic market impact.
-                    </p>
-                </div>
-
-                <!-- Service Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service 1 -->
-                    <div class="p-8 rounded-2xl bg-charcoal-900 border border-white/10 hover:border-gold-500/80 transition-all group flex flex-col justify-between">
-                        <div>
-                            <div class="text-gold-400 text-3xl mb-4"><i class="fa-solid fa-file-contract"></i></div>
-                            <h3 class="text-xl font-bold text-white mb-3">Research, Evaluation & Evidence</h3>
-                            <p class="text-sm text-gray-400 font-light leading-relaxed mb-6">
-                                Baseline and endline studies; impact and process evaluations; operational research; RCT and quasi-experimental designs; qualitative research; policy diagnostics; evidence synthesis.
-                            </p>
-                        </div>
-                        <ul class="space-y-2 text-xs text-gray-300 pt-4 border-t border-white/10">
-                            <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Rigorous impact evaluations</li>
-                            <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Policy & implementation diagnostics</li>
-                        </ul>
-                    </div>
-
-                    <!-- Service 2 -->
-                    <div class="p-8 rounded-2xl bg-charcoal-900 border border-white/10 hover:border-gold-500/80 transition-all group flex flex-col justify-between">
-                        <div>
-                            <div class="text-gold-400 text-3xl mb-4"><i class="fa-solid fa-chart-pie"></i></div>
-                            <h3 class="text-xl font-bold text-white mb-3">MERL & Data Systems</h3>
-                            <p class="text-sm text-gray-400 font-light leading-relaxed mb-6">
-                                MERL frameworks; theories of change; indicator and KPI systems; data quality assurance; learning agendas; dashboards and reporting systems; outcome verification.
-                            </p>
-                        </div>
-                        <ul class="space-y-2 text-xs text-gray-300 pt-4 border-t border-white/10">
-                            <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Indicator & KPI systems</li>
-                            <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Real-time dashboards</li>
-                        </ul>
-                    </div>
-
-                    <!-- Service 3 -->
-                    <div class="p-8 rounded-2xl bg-charcoal-900 border border-white/10 hover:border-gold-500/80 transition-all group flex flex-col justify-between">
-                        <div>
-                            <div class="text-gold-400 text-3xl mb-4"><i class="fa-solid fa-graduation-cap"></i></div>
-                            <h3 class="text-xl font-bold text-white mb-3">Capacity Development</h3>
-                            <p class="text-sm text-gray-400 font-light leading-relaxed mb-6">
-                                Training needs assessment; curriculum design; bootcamps; employability and career readiness; entrepreneurship; leadership; coaching; mentorship; institutional strengthening.
-                            </p>
-                        </div>
-                        <ul class="space-y-2 text-xs text-gray-300 pt-4 border-t border-white/10">
-                            <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Leadership & coaching</li>
-                            <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Institutional strengthening</li>
-                        </ul>
-                    </div>
-
-                    <!-- Service 4 -->
-                    <div class="p-8 rounded-2xl bg-charcoal-900 border border-white/10 hover:border-gold-500/80 transition-all group flex flex-col justify-between">
-                        <div>
-                            <div class="text-gold-400 text-3xl mb-4"><i class="fa-solid fa-rocket"></i></div>
-                            <h3 class="text-xl font-bold text-white mb-3">Innovation & Enterprise Development</h3>
-                            <p class="text-sm text-gray-400 font-light leading-relaxed mb-6">
-                                Innovation challenges; incubation and acceleration support; enterprise coaching; market linkage; solution prototyping; technology-enabled models; behavioral design.
-                            </p>
-                        </div>
-                        <ul class="space-y-2 text-xs text-gray-300 pt-4 border-t border-white/10">
-                            <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Incubation & acceleration</li>
-                            <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Solution prototyping</li>
-                        </ul>
-                    </div>
-
-                    <!-- Service 5 -->
-                    <div class="p-8 rounded-2xl bg-charcoal-900 border border-white/10 hover:border-gold-500/80 transition-all group flex flex-col justify-between">
-                        <div>
-                            <div class="text-gold-400 text-3xl mb-4"><i class="fa-solid fa-handshake-angle"></i></div>
-                            <h3 class="text-xl font-bold text-white mb-3">Employment & Inclusive Access</h3>
-                            <p class="text-sm text-gray-400 font-light leading-relaxed mb-6">
-                                Job matching and career services; decentralized access points; employer engagement; workforce diagnostics; inclusion strategies; pathways for youth, women, and PWDs.
-                            </p>
-                        </div>
-                        <ul class="space-y-2 text-xs text-gray-300 pt-4 border-t border-white/10">
-                            <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Workforce diagnostics</li>
-                            <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Inclusion & accessibility</li>
-                        </ul>
-                    </div>
-
-                    <!-- Service 6 -->
-                    <div class="p-8 rounded-2xl bg-charcoal-900 border border-white/10 hover:border-gold-500/80 transition-all group flex flex-col justify-between">
-                        <div>
-                            <div class="text-gold-400 text-3xl mb-4"><i class="fa-solid fa-sitemap"></i></div>
-                            <h3 class="text-xl font-bold text-white mb-3">Program Design & Implementation</h3>
-                            <p class="text-sm text-gray-400 font-light leading-relaxed mb-6">
-                                Program architecture; implementation planning; partner coordination; technical assistance; performance management; learning and adaptation; close-out and regeneration.
-                            </p>
-                        </div>
-                        <ul class="space-y-2 text-xs text-gray-300 pt-4 border-t border-white/10">
-                            <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Program architecture</li>
-                            <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Learning & adaptation</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="regenerative" class="py-24 bg-charcoal-900 border-t border-white/10 relative overflow-hidden">
-            <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-5 space-y-6">
-                        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold px-3 py-1 bg-gold-500/10 border border-gold-500/20 rounded">
-                            Our Unique Philosophy
-                        </span>
-                        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white leading-snug">
-                            The Regenerative Development Approach
-                        </h2>
-                        <p class="text-gray-300 leading-relaxed font-light">
-                            Development investments should not become obsolete when a project closes. REIGNS works with a regenerative mindset: understand what has been created, identify what remains unfinished, and convert existing assets into new pathways for impact.
-                        </p>
-                        <div class="p-4 rounded-xl bg-charcoal-950 border border-gold-500/30 text-sm text-gray-300">
-                            <span class="text-gold-400 font-bold">The Market Distinction:</span> This is the one idea in the REIGNS model no other firm in the market is currently running.
-                        </div>
-                    </div>
-
-                    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 hover:border-gold-500 transition-all">
-                            <div class="text-gold-400 font-serif font-bold text-xl mb-2 flex items-center">
-                                <span class="w-8 h-8 rounded-full bg-gold-500/10 flex items-center justify-center text-sm mr-3 text-gold-400">01</span>
-                                Recycle
-                            </div>
-                            <p class="text-sm text-gray-400 font-light leading-relaxed">
-                                Identify underused knowledge, relationships, infrastructure, skills, data, and community assets created through previous interventions.
-                            </p>
-                        </div>
-
-                        <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 hover:border-gold-500 transition-all">
-                            <div class="text-gold-400 font-serif font-bold text-xl mb-2 flex items-center">
-                                <span class="w-8 h-8 rounded-full bg-gold-500/10 flex items-center justify-center text-sm mr-3 text-gold-400">02</span>
-                                Reframe
-                            </div>
-                            <p class="text-sm text-gray-400 font-light leading-relaxed">
-                                Work collaboratively with stakeholders to reinterpret persistent problems and co-create practical new pathways.
-                            </p>
-                        </div>
-
-                        <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 hover:border-gold-500 transition-all">
-                            <div class="text-gold-400 font-serif font-bold text-xl mb-2 flex items-center">
-                                <span class="w-8 h-8 rounded-full bg-gold-500/10 flex items-center justify-center text-sm mr-3 text-gold-400">03</span>
-                                Renew
-                            </div>
-                            <p class="text-sm text-gray-400 font-light leading-relaxed">
-                                Use evidence, learning, and diagnostics to improve, adapt, and extend what already exists rather than starting from zero.
-                            </p>
-                        </div>
-
-                        <div class="p-6 rounded-2xl bg-charcoal-950 border border-white/10 hover:border-gold-500 transition-all">
-                            <div class="text-gold-400 font-serif font-bold text-xl mb-2 flex items-center">
-                                <span class="w-8 h-8 rounded-full bg-gold-500/10 flex items-center justify-center text-sm mr-3 text-gold-400">04</span>
-                                Redefine
-                            </div>
-                            <p class="text-sm text-gray-400 font-light leading-relaxed">
-                                Look beyond income alone to opportunity, access, skills, dignity, agency, and connections that shape people's ability to thrive.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="partners" class="py-24 bg-charcoal-950 border-t border-white/10">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs uppercase tracking-widest text-gold-400 font-bold px-3 py-1 bg-gold-500/10 border border-gold-500/20 rounded">
-                        Clientele & Engagement
-                    </span>
-                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-4 mb-4">
-                        Who We Serve & Partner Experience
-                    </h2>
-                    <p class="text-gray-400 font-light">
-                        REIGNS is built for organizations that demand credible evidence, superior capability, disciplined delivery, and innovative solutions.
-                    </p>
-                </div>
-
-                <!-- Who We Serve Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-                    <div class="p-6 rounded-xl bg-charcoal-900 border border-white/10 text-center">
-                        <div class="w-12 h-12 mx-auto rounded-full bg-gold-500/10 flex items-center justify-center text-gold-400 text-lg mb-4">
-                            <i class="fa-solid fa-landmark"></i>
-                        </div>
-                        <h4 class="text-white font-bold mb-2 text-sm">Governments & Public Agencies</h4>
-                        <p class="text-xs text-gray-400">Ministries, departments, and municipal authorities.</p>
-                    </div>
-
-                    <div class="p-6 rounded-xl bg-charcoal-900 border border-white/10 text-center">
-                        <div class="w-12 h-12 mx-auto rounded-full bg-gold-500/10 flex items-center justify-center text-gold-400 text-lg mb-4">
-                            <i class="fa-solid fa-globe"></i>
-                        </div>
-                        <h4 class="text-white font-bold mb-2 text-sm">Development Partners</h4>
-                        <p class="text-xs text-gray-400">Foundations, donors, and international organizations.</p>
-                    </div>
-
-                    <div class="p-6 rounded-xl bg-charcoal-900 border border-white/10 text-center">
-                        <div class="w-12 h-12 mx-auto rounded-full bg-gold-500/10 flex items-center justify-center text-gold-400 text-lg mb-4">
-                            <i class="fa-solid fa-building"></i>
-                        </div>
-                        <h4 class="text-white font-bold mb-2 text-sm">Private Sector & Employers</h4>
-                        <p class="text-xs text-gray-400">Enterprises, investors, and accelerators.</p>
-                    </div>
-
-                    <div class="p-6 rounded-xl bg-charcoal-900 border border-white/10 text-center">
-                        <div class="w-12 h-12 mx-auto rounded-full bg-gold-500/10 flex items-center justify-center text-gold-400 text-lg mb-4">
-                            <i class="fa-solid fa-book-open"></i>
-                        </div>
-                        <h4 class="text-white font-bold mb-2 text-sm">Think Tanks & CSOs</h4>
-                        <p class="text-xs text-gray-400">Research centers, academic institutions, and NGOs.</p>
-                    </div>
-                </div>
-
-                <!-- Partner Experience 5-Question Framework -->
-                <div class="p-8 sm:p-12 rounded-3xl bg-charcoal-900 border border-gold-500/30">
-                    <div class="max-w-2xl mb-10">
-                        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">The REIGNS Framework</span>
-                        <h3 class="text-2xl sm:text-3xl font-serif font-bold text-white mt-2">The Partner Engagement Experience</h3>
-                        <p class="text-sm text-gray-400 mt-2">Every REIGNS engagement is systematically structured around five core questions:</p>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
-                        <div class="p-5 rounded-xl bg-charcoal-950 border border-white/10">
-                            <div class="text-gold-400 font-bold text-lg mb-2">01</div>
-                            <h4 class="text-white font-semibold text-sm mb-1">What is the problem?</h4>
-                            <p class="text-xs text-gray-400 font-light">We diagnose before prescribing any solution.</p>
-                        </div>
-
-                        <div class="p-5 rounded-xl bg-charcoal-950 border border-white/10">
-                            <div class="text-gold-400 font-bold text-lg mb-2">02</div>
-                            <h4 class="text-white font-semibold text-sm mb-1">What does evidence say?</h4>
-                            <p class="text-xs text-gray-400 font-light">We establish what is known, unknown, and measurable.</p>
-                        </div>
-
-                        <div class="p-5 rounded-xl bg-charcoal-950 border border-white/10">
-                            <div class="text-gold-400 font-bold text-lg mb-2">03</div>
-                            <h4 class="text-white font-semibold text-sm mb-1">What needs to change?</h4>
-                            <p class="text-xs text-gray-400 font-light">We translate evidence into practical design & capability.</p>
-                        </div>
-
-                        <div class="p-5 rounded-xl bg-charcoal-950 border border-white/10">
-                            <div class="text-gold-400 font-bold text-lg mb-2">04</div>
-                            <h4 class="text-white font-semibold text-sm mb-1">How will it be delivered?</h4>
-                            <p class="text-xs text-gray-400 font-light">We build systems, partnerships, and accountability.</p>
-                        </div>
-
-                        <div class="p-5 rounded-xl bg-charcoal-950 border border-white/10">
-                            <div class="text-gold-400 font-bold text-lg mb-2">05</div>
-                            <h4 class="text-white font-semibold text-sm mb-1">What remains after?</h4>
-                            <p class="text-xs text-gray-400 font-light">We ensure learning, assets, and relationships sustain.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="py-24 bg-charcoal-900 border-t border-white/10 relative">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    <!-- Contact Info -->
-                    <div class="lg:col-span-5 space-y-6">
-                        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold px-3 py-1 bg-gold-500/10 border border-gold-500/20 rounded">
-                            Get In Touch
-                        </span>
-                        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white leading-snug">
-                            Partner With REIGNS Today
-                        </h2>
-                        <p class="text-gray-300 font-light leading-relaxed">
-                            Whether you are designing a complex development intervention, evaluating a national program, or building institutional capability, our team is ready to collaborate.
-                        </p>
-
-                        <div class="space-y-4 pt-4">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center text-gold-400 flex-shrink-0 mt-1">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-white font-semibold text-sm">Headquarters</h4>
-                                    <p class="text-xs text-gray-400">Accra, Greater Accra Region, Ghana</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <div class="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center text-gold-400 flex-shrink-0 mt-1">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-white font-semibold text-sm">Direct Inquiries</h4>
-                                    <p class="text-xs text-gray-400">partnerships@reigns-consultancy.org</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <div class="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center text-gold-400 flex-shrink-0 mt-1">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-white font-semibold text-sm">Professional Desk</h4>
-                                    <p class="text-xs text-gray-400">+233 (0) 30 000 REIGNS</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-4 rounded-xl bg-charcoal-950 border border-white/10 text-xs text-gray-400 italic">
-                            "The goal is not to win the next RFP. The goal is to become the name written into the next RFP before it's published."
-                        </div>
-                    </div>
-
-                    <!-- Contact Form -->
-                    <div class="lg:col-span-7">
-                        <div class="p-8 sm:p-10 rounded-3xl bg-charcoal-950 border border-white/10 shadow-2xl relative">
-                            <form id="partner-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    <div>
-                                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Your Name *</label>
-                                        <input type="text" required class="w-full bg-charcoal-900 border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-gold-500 transition-colors" placeholder="Dr. Jane Doe">
-                                    </div>
-                                    <div>
-                                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Organization / Agency *</label>
-                                        <input type="text" required class="w-full bg-charcoal-900 border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-gold-500 transition-colors" placeholder="Ministry / Foundation / Firm">
-                                    </div>
-                                </div>
-
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    <div>
-                                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Email Address *</label>
-                                        <input type="email" required class="w-full bg-charcoal-900 border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-gold-500 transition-colors" placeholder="jane@organization.org">
-                                    </div>
-                                    <div>
-                                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Practice Area of Interest</label>
-                                        <select class="w-full bg-charcoal-900 border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-gold-500 transition-colors">
-                                            <option>Research & Evaluation</option>
-                                            <option>MERL & Data Systems</option>
-                                            <option>Capacity Development</option>
-                                            <option>Innovation & Enterprise</option>
-                                            <option>Employment & Inclusive Access</option>
-                                            <option>Program Design & Implementation</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Project Brief / Message *</label>
-                                    <textarea rows="4" required class="w-full bg-charcoal-900 border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-gold-500 transition-colors resize-none" placeholder="Describe your development challenge or consultancy need..."></textarea>
-                                </div>
-
-                                <button type="submit" class="w-full py-4 rounded-lg gold-gradient-bg text-black font-bold text-sm tracking-wider uppercase hover:opacity-95 shadow-lg transition-all transform hover:-translate-y-0.5">
-                                    Submit Partner Inquiry
-                                </button>
-                            </form>
-
-                            <!-- Success Modal State -->
-                            <div id="form-success" class="hidden absolute inset-0 bg-charcoal-950/95 backdrop-blur-md rounded-3xl flex flex-col items-center justify-center text-center p-8">
-                                <div class="w-16 h-16 rounded-full gold-gradient-bg flex items-center justify-center text-black text-2xl mb-4 shadow-lg">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                                <h3 class="text-2xl font-serif font-bold text-white mb-2">Inquiry Received</h3>
-                                <p class="text-sm text-gray-300 max-w-md mb-6 font-light">
-                                    Thank you for reaching out to REIGNS. Our executive review team will evaluate your brief and contact you shortly.
-                                </p>
-                                <button onclick="resetForm()" class="px-6 py-2.5 rounded bg-white/10 hover:bg-white/20 text-white text-xs font-semibold uppercase tracking-wider transition-colors">
-                                    Send Another Inquiry
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-charcoal-950 border-t border-white/10 py-16 text-gray-400 text-sm">
+    <!-- Who We Are -->
+    <section id="about" class="py-20 bg-dark-800 border-y border-gold-500/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <div class="space-y-4 md:col-span-1">
-                    <div class="flex items-center space-x-3">
-                        <div class="w-8 h-8 rounded-lg gold-gradient-bg flex items-center justify-center font-bold text-black text-lg">
-                            R
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-gold-400 text-xs uppercase tracking-widest font-semibold">Institutional Overview</p>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Built To Lead, Commissioned To Deliver</h2>
+                <div class="w-16 h-0.5 bg-gold-400 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-gray-300 font-light leading-relaxed">
+                    <p class="text-lg text-white font-normal">
+                        REIGNS is a Ghana-based development consultancy built to turn evidence, capability, and innovation into measurable, long-term development outcomes.
+                    </p>
+                    <p>
+                        We operate at the critical junction where rigorous research meets real-world execution — generating credible evidence, strengthening institutional and human capability, designing practical adaptive solutions, and establishing delivery systems that continue producing value after funding cycles conclude.
+                    </p>
+                    <p>
+                        <strong class="text-gold-400 font-semibold">We are not an NGO.</strong> REIGNS is a professional, fee-earning firm designed to be commissioned by governments, multilateral development partners, private foundations, academic institutions, and corporate employers when the work must be rigorous, practical, and accountable.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-dark-900 border border-gold-500/20 p-6 rounded-xl hover:border-gold-400/50 transition-colors">
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                            <i class="fa-solid fa-eye"></i>
                         </div>
-                        <span class="font-serif text-xl font-bold text-white tracking-wider">REIGNS</span>
+                        <h3 class="font-serif text-xl font-bold text-white mb-2">Our Vision</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">To become the trusted development partner known for turning evidence, capability, and innovation into durable solutions across every SDG.</p>
                     </div>
-                    <p class="text-xs text-gray-400 font-light leading-relaxed">
-                        Research · Empowerment · Innovation · Growth · Networked Solutions. We turn poverty into a solvable disconnect.
-                    </p>
-                </div>
 
-                <div>
-                    <h4 class="text-white font-semibold text-xs uppercase tracking-wider mb-4">Practice Lines</h4>
-                    <ul class="space-y-2 text-xs font-light">
-                        <li><a href="#services" class="hover:text-gold-400 transition-colors">Research & Evaluation</a></li>
-                        <li><a href="#services" class="hover:text-gold-400 transition-colors">MERL & Data Systems</a></li>
-                        <li><a href="#services" class="hover:text-gold-400 transition-colors">Capacity Development</a></li>
-                        <li><a href="#services" class="hover:text-gold-400 transition-colors">Innovation & Enterprise</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-white font-semibold text-xs uppercase tracking-wider mb-4">The Model</h4>
-                    <ul class="space-y-2 text-xs font-light">
-                        <li><a href="#engines" class="hover:text-gold-400 transition-colors">The Evidence Engine</a></li>
-                        <li><a href="#engines" class="hover:text-gold-400 transition-colors">The Empowerment Engine</a></li>
-                        <li><a href="#engines" class="hover:text-gold-400 transition-colors">The Innovation Engine</a></li>
-                        <li><a href="#engines" class="hover:text-gold-400 transition-colors">Networked Delivery Engine</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-white font-semibold text-xs uppercase tracking-wider mb-4">Host on GitHub Pages</h4>
-                    <p class="text-xs text-gray-400 font-light mb-4">
-                        This repository is ready to be committed and deployed instantly to GitHub Pages.
-                    </p>
-                    <div class="text-xs font-mono text-gold-400 bg-charcoal-900 p-2.5 rounded border border-white/10">
-                        git push origin main
+                    <div class="bg-dark-900 border border-gold-500/20 p-6 rounded-xl hover:border-gold-400/50 transition-colors">
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-2">Our Mission</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">To research, strengthen, innovate, and connect — helping partners design, deliver, measure, and regenerate high-value impact.</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 font-light">
-                <p>&copy; 2026 REIGNS Development Consultancy. All rights reserved. Rooted in Accra, Ghana.</p>
-                <div class="flex space-x-6 mt-4 sm:mt-0">
-                    <a href="#" class="hover:text-gold-400 transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-gold-400 transition-colors">Professional Ethics</a>
-                    <a href="#" class="hover:text-gold-400 transition-colors">Methodological Integrity</a>
+    <!-- Brand Acronym Section -->
+    <section id="acronym" class="py-20 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-gold-400 text-xs uppercase tracking-widest font-semibold">Our Strategic Acronym</p>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">What REIGNS Stands For</h2>
+                <p class="text-gray-400 text-sm mt-3">Six letters, six institutional commitments made to every partner who engages us.</p>
+                <div class="w-16 h-0.5 bg-gold-400 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-dark-800 border border-gold-500/20 rounded-xl p-6 hover:border-gold-400 transition-all group">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="font-serif text-4xl font-extrabold text-gold-400 group-hover:scale-110 transition-transform">R</span>
+                        <h3 class="font-serif text-2xl font-bold text-white">Research</h3>
+                    </div>
+                    <p class="text-sm text-gray-300 font-light">Generate and apply credible, decision-ready evidence to inform better development policies and investments.</p>
                 </div>
+
+                <div class="bg-dark-800 border border-gold-500/20 rounded-xl p-6 hover:border-gold-400 transition-all group">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="font-serif text-4xl font-extrabold text-gold-400 group-hover:scale-110 transition-transform">E</span>
+                        <h3 class="font-serif text-2xl font-bold text-white">Empowerment</h3>
+                    </div>
+                    <p class="text-sm text-gray-300 font-light">Build individuals, institutions, and communities with resilient capabilities that endure over time.</p>
+                </div>
+
+                <div class="bg-dark-800 border border-gold-500/20 rounded-xl p-6 hover:border-gold-400 transition-all group">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="font-serif text-4xl font-extrabold text-gold-400 group-hover:scale-110 transition-transform">I</span>
+                        <h3 class="font-serif text-2xl font-bold text-white">Innovation</h3>
+                    </div>
+                    <p class="text-sm text-gray-300 font-light">Design practical, adaptive, user-centered solutions to address complex, real-world development constraints.</p>
+                </div>
+
+                <div class="bg-dark-800 border border-gold-500/20 rounded-xl p-6 hover:border-gold-400 transition-all group">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="font-serif text-4xl font-extrabold text-gold-400 group-hover:scale-110 transition-transform">G</span>
+                        <h3 class="font-serif text-2xl font-bold text-white">Growth</h3>
+                    </div>
+                    <p class="text-sm text-gray-300 font-light">Translate capability and innovation into measurable, inclusive, and sustainable economic progress.</p>
+                </div>
+
+                <div class="bg-dark-800 border border-gold-500/20 rounded-xl p-6 hover:border-gold-400 transition-all group">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="font-serif text-4xl font-extrabold text-gold-400 group-hover:scale-110 transition-transform">N</span>
+                        <h3 class="font-serif text-2xl font-bold text-white">Networked</h3>
+                    </div>
+                    <p class="text-sm text-gray-300 font-light">Connect people, institutions, markets, knowledge ecosystems, and scalable delivery networks.</p>
+                </div>
+
+                <div class="bg-dark-800 border border-gold-500/20 rounded-xl p-6 hover:border-gold-400 transition-all group">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="font-serif text-4xl font-extrabold text-gold-400 group-hover:scale-110 transition-transform">S</span>
+                        <h3 class="font-serif text-2xl font-bold text-white">Solutions</h3>
+                    </div>
+                    <p class="text-sm text-gray-300 font-light">Move beyond activity tracking to delivered solutions that respond directly to defined problems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The 4 Engines -->
+    <section id="engines" class="py-20 bg-dark-800 border-t border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-gold-400 text-xs uppercase tracking-widest font-semibold">The REIGNS Model</p>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Four Engines, One Integrated Firm</h2>
+                <p class="text-gray-400 text-sm mt-3">Most development firms excel in a single lane. REIGNS is architected to run four integrated capabilities simultaneously.</p>
+                <div class="w-16 h-0.5 bg-gold-400 mx-auto mt-4"></div>
+            </div>
+
+            <!-- Interactive Tab System -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+                <button onclick="switchEngine('evidence')" id="btn-evidence" class="engine-tab py-4 px-3 rounded-lg border border-gold-400 bg-gold-500 text-black font-bold text-sm text-center transition-all">
+                    1. Evidence Engine
+                </button>
+                <button onclick="switchEngine('empowerment')" id="btn-empowerment" class="engine-tab py-4 px-3 rounded-lg border border-gold-500/30 bg-dark-900 text-gray-300 font-bold text-sm text-center hover:border-gold-400 transition-all">
+                    2. Empowerment Engine
+                </button>
+                <button onclick="switchEngine('innovation')" id="btn-innovation" class="engine-tab py-4 px-3 rounded-lg border border-gold-500/30 bg-dark-900 text-gray-300 font-bold text-sm text-center hover:border-gold-400 transition-all">
+                    3. Innovation Engine
+                </button>
+                <button onclick="switchEngine('delivery')" id="btn-delivery" class="engine-tab py-4 px-3 rounded-lg border border-gold-500/30 bg-dark-900 text-gray-300 font-bold text-sm text-center hover:border-gold-400 transition-all">
+                    4. Networked Delivery
+                </button>
+            </div>
+
+            <!-- Tab Content Cards -->
+            <div id="engine-content" class="bg-dark-900 border border-gold-500/30 rounded-2xl p-8 sm:p-10 shadow-2xl">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Regenerative Development Approach -->
+    <section id="regenerative" class="py-20 bg-dark-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <p class="text-gold-400 text-xs uppercase tracking-widest font-semibold">Our Distinctive Philosophy</p>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">The Regenerative Development Framework</h2>
+                    <p class="text-gray-300 font-light leading-relaxed">
+                        Development investments should not become obsolete when a funding cycle closes. REIGNS operates with a disciplined regenerative mindset: understand what has been created, identify what remains unfinished, and convert existing assets into new pathways for scale.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start space-x-4 p-4 rounded-lg bg-dark-800 border border-gold-500/20">
+                            <span class="w-8 h-8 rounded bg-gold-500/20 text-gold-400 font-bold flex items-center justify-center shrink-0">1</span>
+                            <div>
+                                <h4 class="text-white font-bold">Recycle</h4>
+                                <p class="text-xs text-gray-400 mt-1">Identify underused knowledge, relationships, infrastructure, skills, and community assets from prior projects.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-4 rounded-lg bg-dark-800 border border-gold-500/20">
+                            <span class="w-8 h-8 rounded bg-gold-500/20 text-gold-400 font-bold flex items-center justify-center shrink-0">2</span>
+                            <div>
+                                <h4 class="text-white font-bold">Reframe</h4>
+                                <p class="text-xs text-gray-400 mt-1">Reinterpret persistent development challenges with key stakeholders to co-create practical new pathways.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-4 rounded-lg bg-dark-800 border border-gold-500/20">
+                            <span class="w-8 h-8 rounded bg-gold-500/20 text-gold-400 font-bold flex items-center justify-center shrink-0">3</span>
+                            <div>
+                                <h4 class="text-white font-bold">Renew</h4>
+                                <p class="text-xs text-gray-400 mt-1">Apply rigorous diagnostics and learning to improve, adapt, and extend interventions that demonstrate promise.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-4 rounded-lg bg-dark-800 border border-gold-500/20">
+                            <span class="w-8 h-8 rounded bg-gold-500/20 text-gold-400 font-bold flex items-center justify-center shrink-0">4</span>
+                            <div>
+                                <h4 class="text-white font-bold">Redefine</h4>
+                                <p class="text-xs text-gray-400 mt-1">Look beyond income alone to opportunity, access, dignity, agency, and connections that sustain long-term well-being.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 relative">
+                    <div class="relative rounded-2xl overflow-hidden border border-gold-500/30">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1000&q=80" alt="Regenerative Impact" class="w-full h-[520px] object-cover filter brightness-90">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-8 left-8 right-8 p-6 bg-dark-800/90 border border-gold-500/30 rounded-xl backdrop-blur-md">
+                            <h3 class="font-serif text-xl font-bold text-gold-400 mb-2">Beyond Single Project Cycles</h3>
+                            <p class="text-xs text-gray-300 leading-relaxed">
+                                "This is not a promise that every project can be extended indefinitely. It is an institutional discipline for ensuring that learning, assets, and relationships are deliberately structured before an intervention disappears."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Lines Section with Category Filter -->
+    <section id="services" class="py-20 bg-dark-800 border-y border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-gold-400 text-xs uppercase tracking-widest font-semibold">Our Professional Offerings</p>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Core Service Lines</h2>
+                <p class="text-gray-400 text-sm mt-3">Comprehensive, evidence-driven development advisory across six core portfolios.</p>
+                <div class="w-16 h-0.5 bg-gold-400 mx-auto mt-4"></div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12">
+                <button onclick="filterServices('all')" class="filter-btn active-filter px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-gold-400 bg-gold-500 text-black">All Services</button>
+                <button onclick="filterServices('research')" class="filter-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-gold-500/30 bg-dark-900 text-gray-300 hover:border-gold-400">Research & MERL</button>
+                <button onclick="filterServices('capacity')" class="filter-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-gold-500/30 bg-dark-900 text-gray-300 hover:border-gold-400">Capacity & Enterprise</button>
+                <button onclick="filterServices('systems')" class="filter-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-gold-500/30 bg-dark-900 text-gray-300 hover:border-gold-400">Systems & Implementation</button>
+            </div>
+
+            <!-- Service Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="servicesGrid">
+                
+                <!-- Service 1 -->
+                <div class="service-card research bg-dark-900 border border-gold-500/20 rounded-xl p-6 hover:border-gold-400 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3">Research, Evaluation & Evidence</h3>
+                        <p class="text-xs text-gray-400 mb-4 leading-relaxed">Baseline/endline studies, RCT & quasi-experimental designs, process evaluations, qualitative field research, and evidence synthesis.</p>
+                    </div>
+                    <button onclick="openModal('Research, Evaluation & Evidence')" class="text-xs font-bold text-gold-400 uppercase tracking-wider flex items-center space-x-2 hover:text-gold-300 pt-4 border-t border-gray-800">
+                        <span>Commission Portfolio</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card research bg-dark-900 border border-gold-500/20 rounded-xl p-6 hover:border-gold-400 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3">MERL & Data Systems Architecture</h3>
+                        <p class="text-xs text-gray-400 mb-4 leading-relaxed">Custom MERL frameworks, Theories of Change, KPI/indicator architecture, automated dashboards, and data quality audits.</p>
+                    </div>
+                    <button onclick="openModal('MERL & Data Systems Architecture')" class="text-xs font-bold text-gold-400 uppercase tracking-wider flex items-center space-x-2 hover:text-gold-300 pt-4 border-t border-gray-800">
+                        <span>Commission Portfolio</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card capacity bg-dark-900 border border-gold-500/20 rounded-xl p-6 hover:border-gold-400 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3">Capacity Development & Training</h3>
+                        <p class="text-xs text-gray-400 mb-4 leading-relaxed">Training needs assessments, employability bootcamps, leadership coaching, curriculum engineering, and institutional strengthening.</p>
+                    </div>
+                    <button onclick="openModal('Capacity Development & Training')" class="text-xs font-bold text-gold-400 uppercase tracking-wider flex items-center space-x-2 hover:text-gold-300 pt-4 border-t border-gray-800">
+                        <span>Commission Portfolio</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card capacity bg-dark-900 border border-gold-500/20 rounded-xl p-6 hover:border-gold-400 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3">Innovation & Enterprise Development</h3>
+                        <p class="text-xs text-gray-400 mb-4 leading-relaxed">Incubation/acceleration models, challenge design, enterprise coaching, prototyping, and market linkage systems.</p>
+                    </div>
+                    <button onclick="openModal('Innovation & Enterprise Development')" class="text-xs font-bold text-gold-400 uppercase tracking-wider flex items-center space-x-2 hover:text-gold-300 pt-4 border-t border-gray-800">
+                        <span>Commission Portfolio</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card systems bg-dark-900 border border-gold-500/20 rounded-xl p-6 hover:border-gold-400 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                            <i class="fa-solid fa-users-line"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3">Employment & Inclusive Access</h3>
+                        <p class="text-xs text-gray-400 mb-4 leading-relaxed">Decentralized career access models, employer engagement platforms, workforce diagnostics, and GESI inclusion strategies.</p>
+                    </div>
+                    <button onclick="openModal('Employment & Inclusive Access')" class="text-xs font-bold text-gold-400 uppercase tracking-wider flex items-center space-x-2 hover:text-gold-300 pt-4 border-t border-gray-800">
+                        <span>Commission Portfolio</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card systems bg-dark-900 border border-gold-500/20 rounded-xl p-6 hover:border-gold-400 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3">Program Design & Technical Assistance</h3>
+                        <p class="text-xs text-gray-400 mb-4 leading-relaxed">Program architecture design, partner coordination, technical assistance, adaptive management, and regeneration planning.</p>
+                    </div>
+                    <button onclick="openModal('Program Design & Technical Assistance')" class="text-xs font-bold text-gold-400 uppercase tracking-wider flex items-center space-x-2 hover:text-gold-300 pt-4 border-t border-gray-800">
+                        <span>Commission Portfolio</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership & Team Portfolios Section -->
+    <section id="team" class="py-20 bg-dark-900 border-b border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-gold-400 text-xs uppercase tracking-widest font-semibold">Leadership & Portfolio Leads</p>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Institutional Leadership</h2>
+                <p class="text-gray-400 text-sm mt-3">Seasoned development practitioners, MERL architects, and strategy leads committed to execution rigor.</p>
+                <div class="w-16 h-0.5 bg-gold-400 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Executive Director -->
+                <div class="bg-dark-800 border border-gold-500/30 rounded-xl overflow-hidden hover:border-gold-400 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-64 overflow-hidden bg-dark-700">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Executive Director Profile" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-800 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 right-3 bg-gold-500 text-black font-bold text-[10px] uppercase tracking-wider px-2 py-1 rounded">Executive</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-400 transition-colors">Richard Murphy Edro</h3>
+                            <p class="text-gold-400 text-xs font-semibold mt-1 uppercase tracking-wider">Executive Director & Strategic Lead</p>
+                            <p class="text-gray-400 text-xs mt-3 line-clamp-3 leading-relaxed">
+                                Over 12 years of strategic leadership across MERL, donor-funded multi-million-dollar project portfolios, youth employment, and GESI strategies.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openTeamModal('edro')" class="w-full py-2.5 bg-dark-900 hover:bg-gold-500 hover:text-black border border-gold-500/30 text-white font-semibold text-xs uppercase tracking-wider rounded transition-all">
+                            View Full Portfolio Profile
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Director of Research -->
+                <div class="bg-dark-800 border border-gold-500/20 rounded-xl overflow-hidden hover:border-gold-400 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-64 overflow-hidden bg-dark-700">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Director of Research" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-800 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 right-3 bg-dark-900 border border-gold-500/40 text-gold-400 font-bold text-[10px] uppercase tracking-wider px-2 py-1 rounded">Research</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-400 transition-colors">Abigail Asante-Kuttin</h3>
+                            <p class="text-gold-400 text-xs font-semibold mt-1 uppercase tracking-wider">Director of Research & Evidence Design</p>
+                            <p class="text-gray-400 text-xs mt-3 line-clamp-3 leading-relaxed">
+                                Expert in quantitative and qualitative evaluation methodologies, field research logistics, and data verification frameworks.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openTeamModal('abigail')" class="w-full py-2.5 bg-dark-900 hover:bg-gold-500 hover:text-black border border-gold-500/30 text-white font-semibold text-xs uppercase tracking-wider rounded transition-all">
+                            View Full Portfolio Profile
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Lead, Enterprise & Innovation -->
+                <div class="bg-dark-800 border border-gold-500/20 rounded-xl overflow-hidden hover:border-gold-400 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-64 overflow-hidden bg-dark-700">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80" alt="Enterprise Lead" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-800 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 right-3 bg-dark-900 border border-gold-500/40 text-gold-400 font-bold text-[10px] uppercase tracking-wider px-2 py-1 rounded">Innovation</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-400 transition-colors">Matilda Amoah</h3>
+                            <p class="text-gold-400 text-xs font-semibold mt-1 uppercase tracking-wider">Lead, Enterprise & Innovation Systems</p>
+                            <p class="text-gray-400 text-xs mt-3 line-clamp-3 leading-relaxed">
+                                Specialist in human-centered solution prototyping, startup bootcamps, enterprise acceleration, and climate-resilient initiatives.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openTeamModal('matilda')" class="w-full py-2.5 bg-dark-900 hover:bg-gold-500 hover:text-black border border-gold-500/30 text-white font-semibold text-xs uppercase tracking-wider rounded transition-all">
+                            View Full Portfolio Profile
+                        </button>
+                    </div>
+                </div>
+
+                <!-- MERL & Safeguarding Lead -->
+                <div class="bg-dark-800 border border-gold-500/20 rounded-xl overflow-hidden hover:border-gold-400 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-64 overflow-hidden bg-dark-700">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="MERL Lead" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-800 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 right-3 bg-dark-900 border border-gold-500/40 text-gold-400 font-bold text-[10px] uppercase tracking-wider px-2 py-1 rounded">MERL & Governance</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-400 transition-colors">Mickey Gyamera</h3>
+                            <p class="text-gold-400 text-xs font-semibold mt-1 uppercase tracking-wider">Senior MERL & Systems Specialist</p>
+                            <p class="text-gray-400 text-xs mt-3 line-clamp-3 leading-relaxed">
+                                Expert in monitoring framework architecture, audit-ready data protocols, institutional safeguarding, and proposal governance.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openTeamModal('mickey')" class="w-full py-2.5 bg-dark-900 hover:bg-gold-500 hover:text-black border border-gold-500/30 text-white font-semibold text-xs uppercase tracking-wider rounded transition-all">
+                            View Full Portfolio Profile
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Stakeholders / Who We Serve -->
+    <section class="py-20 bg-dark-800 border-b border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-gold-400 text-xs uppercase tracking-widest font-semibold">Institutional Partners</p>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Who We Serve</h2>
+                <div class="w-16 h-0.5 bg-gold-400 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-6 bg-dark-900 border border-gold-500/20 rounded-xl">
+                    <i class="fa-solid fa-building-columns text-3xl text-gold-400 mb-3"></i>
+                    <h4 class="text-white font-bold text-sm">Governments & Public Agencies</h4>
+                </div>
+                <div class="p-6 bg-dark-900 border border-gold-500/20 rounded-xl">
+                    <i class="fa-solid fa-globe text-3xl text-gold-400 mb-3"></i>
+                    <h4 class="text-white font-bold text-sm">Development Partners & Donors</h4>
+                </div>
+                <div class="p-6 bg-dark-900 border border-gold-500/20 rounded-xl">
+                    <i class="fa-solid fa-briefcase text-3xl text-gold-400 mb-3"></i>
+                    <h4 class="text-white font-bold text-sm">Private Sector Employers</h4>
+                </div>
+                <div class="p-6 bg-dark-900 border border-gold-500/20 rounded-xl">
+                    <i class="fa-solid fa-hand-holding-heart text-3xl text-gold-400 mb-3"></i>
+                    <h4 class="text-white font-bold text-sm">Foundations, CSOs & Hubs</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action & Partner Commitment -->
+    <section class="py-24 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900 border-b border-gold-500/10 text-center relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <span class="text-gold-400 font-serif text-2xl font-bold tracking-widest uppercase">REIGNS</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-white mt-3 leading-tight">
+                "REIGNS doesn't implement development. <br><span class="gold-gradient-text">REIGNS reignites it."</span>
+            </h2>
+            <p class="text-gray-300 text-sm sm:text-base mt-6 font-light leading-relaxed max-w-2xl mx-auto">
+                We pursue growth without compromising methodological integrity, inclusion, ethics, or accountability. Be ambitious about impact, disciplined about evidence, and practical about delivery.
+            </p>
+            <div class="mt-8">
+                <button onclick="openModal('Strategic Partnership Request')" class="px-10 py-4 bg-gold-500 hover:bg-gold-400 text-black font-bold text-sm uppercase tracking-widest rounded shadow-xl transition-all">
+                    Initiate Engagement
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 py-12 border-t border-gold-500/20 text-xs text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded border border-gold-400/60 bg-dark-800 flex items-center justify-center font-serif font-bold text-gold-400 text-sm">R</div>
+                <div>
+                    <span class="font-serif font-bold text-white text-base tracking-wider">REIGNS</span>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest">Research · Empowerment · Innovation · Growth · Networked Solutions</p>
+                </div>
+            </div>
+
+            <div class="text-center md:text-right">
+                <p>&copy; 2026 REIGNS Consult. Ghana. All Rights Reserved.</p>
+                <p class="mt-1 text-gray-400">Accra, Ghana | Development Consultancy Firm</p>
             </div>
         </div>
     </footer>
 
+    <!-- General Commissioning & Engagement Modal -->
+    <div id="contactModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-dark-800 border border-gold-500/40 rounded-2xl max-w-lg w-full p-8 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <p class="text-gold-400 text-xs font-semibold uppercase tracking-widest">Engage REIGNS</p>
+            <h3 class="font-serif text-2xl font-bold text-white mt-1" id="modalTitle">Commission Engagement</h3>
+            <p class="text-xs text-gray-400 mt-2">Submit your institutional requirements. Our executive team will review and establish contact within 24 hours.</p>
+
+            <form class="mt-6 space-y-4" onsubmit="event.preventDefault(); alert('Thank you for reaching out to REIGNS. Our executive team will contact you shortly.'); closeModal();">
+                <div>
+                    <label class="block text-xs text-gray-300 uppercase tracking-wider mb-1">Full Name</label>
+                    <input type="text" required class="w-full bg-dark-900 border border-gold-500/30 rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-gold-400">
+                </div>
+                <div>
+                    <label class="block text-xs text-gray-300 uppercase tracking-wider mb-1">Organization / Institution</label>
+                    <input type="text" required class="w-full bg-dark-900 border border-gold-500/30 rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-gold-400">
+                </div>
+                <div>
+                    <label class="block text-xs text-gray-300 uppercase tracking-wider mb-1">Official Email</label>
+                    <input type="email" required class="w-full bg-dark-900 border border-gold-500/30 rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-gold-400">
+                </div>
+                <div>
+                    <label class="block text-xs text-gray-300 uppercase tracking-wider mb-1">Project Scope / Engagement Brief</label>
+                    <textarea rows="4" required class="w-full bg-dark-900 border border-gold-500/30 rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-gold-400" placeholder="Detail your program objectives, evaluation needs, or consultancy requirements..."></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 bg-gold-500 hover:bg-gold-400 text-black font-bold uppercase tracking-widest text-xs rounded transition-all">
+                    Submit Institutional Inquiry
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Team Leadership Profile Modal -->
+    <div id="teamModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-dark-800 border border-gold-500/40 rounded-2xl max-w-2xl w-full p-8 relative shadow-2xl max-h-[90vh] overflow-y-auto">
+            <button onclick="closeTeamModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <div id="teamModalBody">
+                <!-- Injected dynamically via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
     <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu on link click
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Navbar blur on scroll
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 20) {
-                navbar.classList.add('shadow-xl', 'bg-charcoal-950/95');
-            } else {
-                navbar.classList.remove('shadow-xl');
+        // Engine Tab Data
+        const engineData = {
+            evidence: {
+                title: "The Evidence Engine",
+                subtitle: "Research, Evaluations, MERL Systems, Diagnostics & Learning Agendas",
+                desc: "Rigorous decision-ready data generation that moves beyond passive reporting into actionable development strategy.",
+                items: [
+                    "Baseline, Midline & Endline Quantitative Studies",
+                    "Randomized Control Trials (RCT) & Quasi-Experimental Evaluation Designs",
+                    "Institutional Monitoring, Evaluation, Research & Learning (MERL) Architecture",
+                    "Qualitative Diagnostics & Policy Implementation Reviews",
+                    "Automated Data Verification Systems & Real-time Dashboards"
+                ]
+            },
+            empowerment: {
+                title: "The Empowerment Engine",
+                subtitle: "Capacity Development, Employability, Leadership & Institutional Coaching",
+                desc: "Building enduring human and institutional capabilities designed to withstand changing political and donor cycles.",
+                items: [
+                    "Institutional & Workforce Training Needs Assessments (TNA)",
+                    "Youth Employability, Career Preparedness & Skill Acceleration Bootcamps",
+                    "Entrepreneurship Incubation, Mentorship & Technical Assistance",
+                    "Curriculum Design & Trainer-of-Trainers (ToT) Frameworks",
+                    "Executive Coaching & Leadership Capacity Building"
+                ]
+            },
+            innovation: {
+                title: "The Innovation Engine",
+                subtitle: "Human-Centred Design, Technology Models & Behavioral Insights",
+                desc: "Designing and testing adaptive solutions tailored specifically to local development constraints and community realities.",
+                items: [
+                    "Human-Centred Design (HCD) & Rapid Prototyping Workshops",
+                    "Tech-Enabled Service Delivery & Digital Tool Integration",
+                    "Behavioral Insights & Community Action Nudges",
+                    "Enterprise Solutions & Climate-Resilient Sanitation/Agri Innovation",
+                    "Innovation Challenges & Hackathon Facilitation"
+                ]
+            },
+            delivery: {
+                title: "The Networked Delivery Engine",
+                subtitle: "Partnerships, Decentralized Access, Knowledge Networks & Scaled Systems",
+                desc: "Connecting decentralized actors, employers, civil society, and markets into high-efficiency delivery ecosystems.",
+                items: [
+                    "Decentralized Job Matching & Service Access Networks",
+                    "Public-Private Partnership (PPP) Alignment Models",
+                    "Knowledge Networks & Multi-Sector SDG Coalitions",
+                    "Market Linkages for Youth & Female Entrepreneurs",
+                    "Scalable Implementation Models & Regional Network Integration"
+                ]
             }
+        };
+
+        function switchEngine(key) {
+            const data = engineData[key];
+            const contentDiv = document.getElementById('engine-content');
+            
+            // Highlight Tab Buttons
+            document.querySelectorAll('.engine-tab').forEach(btn => {
+                btn.classList.remove('bg-gold-500', 'text-black', 'border-gold-400');
+                btn.classList.add('bg-dark-900', 'text-gray-300', 'border-gold-500/30');
+            });
+
+            const activeBtn = document.getElementById(`btn-${key}`);
+            activeBtn.classList.remove('bg-dark-900', 'text-gray-300', 'border-gold-500/30');
+            activeBtn.classList.add('bg-gold-500', 'text-black', 'border-gold-400');
+
+            // Render Content
+            contentDiv.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-7 space-y-4">
+                        <span class="text-gold-400 text-xs font-semibold uppercase tracking-widest">${data.subtitle}</span>
+                        <h3 class="font-serif text-3xl font-bold text-white">${data.title}</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">${data.desc}</p>
+                        <ul class="space-y-2 pt-2">
+                            ${data.items.map(item => `
+                                <li class="flex items-center space-x-3 text-xs text-gray-300">
+                                    <i class="fa-solid fa-check text-gold-400"></i>
+                                    <span>${item}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                    <div class="md:col-span-5 bg-dark-800 border border-gold-500/20 p-6 rounded-xl text-center">
+                        <i class="fa-solid fa-gears text-5xl text-gold-400 mb-4"></i>
+                        <h4 class="font-serif text-lg font-bold text-white mb-2">Commission Engine Capabilities</h4>
+                        <p class="text-xs text-gray-400 mb-4">Engage REIGNS to run this integrated capability for your portfolio or development initiative.</p>
+                        <button onclick="openModal('${data.title}')" class="w-full py-3 bg-gold-500 hover:bg-gold-400 text-black font-bold uppercase tracking-wider text-xs rounded transition-all">
+                            Request Capability Deck
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Service Filter Logic
+        function filterServices(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-gold-500', 'text-black', 'border-gold-400');
+                btn.classList.add('bg-dark-900', 'text-gray-300', 'border-gold-500/30');
+            });
+            event.target.classList.remove('bg-dark-900', 'text-gray-300', 'border-gold-500/30');
+            event.target.classList.add('bg-gold-500', 'text-black', 'border-gold-400');
+
+            const cards = document.querySelectorAll('.service-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Team Portfolios Modal Content Data
+        const teamProfiles = {
+            edro: {
+                name: "Richard Murphy Edro",
+                role: "Executive Director & Strategic Lead",
+                badge: "Executive Leadership",
+                image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
+                bio: "Richard Murphy Edro brings over 12 years of executive leadership in MERL, donor-funded multi-million-dollar program management, and sustainable development strategy across West Africa.",
+                details: [
+                    "Degree & Qualifications: Master of Public Health (MPH) in Monitoring & Evaluation (University of Ghana, Legon); BSc in Accounting (UPSA). Certified in Public Health Systems Thinking.",
+                    "Key Expertise: Managing large-scale research projects for international organizations including the World Bank, Mastercard Foundation, and UNICEF.",
+                    "Specialization: National/Regional Inclusion Strategies, Youth Livelihoods, GESI Mainstreaming, and Quantitative Analysis Systems."
+                ]
+            },
+            abigail: {
+                name: "Abigail Asante-Kuttin",
+                role: "Director of Research & Evidence Design",
+                badge: "Research Portfolio",
+                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+                bio: "Abigail leads REIGNS' research methodology, survey architecture, field data collection protocols, and rigorous data quality assurance systems.",
+                details: [
+                    "Key Expertise: Directing large-scale field survey teams, data quality audits, SurveyCTO/KoboCollect scripting, and quasi-experimental evaluation designs.",
+                    "Sector focus: Public health, agriculture value chain assessments, and youth demographic surveys across regional territories."
+                ]
+            },
+            matilda: {
+                name: "Matilda Amoah",
+                role: "Lead, Enterprise & Innovation Systems",
+                badge: "Innovation Portfolio",
+                image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
+                bio: "Matilda spearheads REIGNS' Human-Centred Design (HCD) prototyping, climate-resilient enterprise solutions, and startup incubation programs.",
+                details: [
+                    "Key Accomplishments: Co-led Team REIGNS' climate sanitation solutions during the UNICEF StartUp Lab Bootcamp and MEST Africa Hackathons.",
+                    "Specialization: Enterprise incubation, youth & women entrepreneurship coaching, and prototype testing for vulnerable communities."
+                ]
+            },
+            mickey: {
+                name: "Mickey Gyamera",
+                role: "Senior MERL & Systems Specialist",
+                badge: "MERL & Governance",
+                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+                bio: "Mickey oversees REIGNS' monitoring frameworks, donor reporting compliance, institutional safeguarding protocols, and proposal governance.",
+                details: [
+                    "Key Expertise: Developing audit-ready MERL indicators, ethical safeguarding policies, institutional risk frameworks, and proposal architecture.",
+                    "Focus: Ensuring strict compliance with international donor standards and transparent program governance."
+                ]
+            }
+        };
+
+        function openTeamModal(key) {
+            const p = teamProfiles[key];
+            const body = document.getElementById('teamModalBody');
+            body.innerHTML = `
+                <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 border-b border-gray-800 pb-6 mb-6">
+                    <img src="${p.image}" class="w-24 h-24 sm:w-32 sm:h-32 rounded-xl object-cover border border-gold-500/40">
+                    <div>
+                        <span class="bg-gold-500/20 text-gold-400 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded border border-gold-500/30">${p.badge}</span>
+                        <h3 class="font-serif text-2xl font-bold text-white mt-2">${p.name}</h3>
+                        <p class="text-gold-400 text-xs font-semibold uppercase tracking-wider">${p.role}</p>
+                        <p class="text-gray-300 text-xs mt-2 leading-relaxed">${p.bio}</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="font-serif text-sm font-bold text-gold-400 uppercase tracking-wider">Portfolio & Credentials Highlights</h4>
+                    <ul class="space-y-2">
+                        ${p.details.map(d => `
+                            <li class="flex items-start space-x-3 text-xs text-gray-300 leading-relaxed">
+                                <i class="fa-solid fa-award text-gold-400 mt-0.5"></i>
+                                <span>${d}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+                <div class="mt-8 pt-4 border-t border-gray-800">
+                    <button onclick="closeTeamModal(); openModal('Direct Leadership Engagement - ${p.name}');" class="w-full py-3 bg-gold-500 hover:bg-gold-400 text-black font-bold uppercase tracking-widest text-xs rounded transition-all">
+                        Connect with Portfolio Lead
+                    </button>
+                </div>
+            `;
+            document.getElementById('teamModal').classList.remove('hidden');
+        }
+
+        function closeTeamModal() {
+            document.getElementById('teamModal').classList.add('hidden');
+        }
+
+        // Modal Logic
+        function openModal(title) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('contactModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('contactModal').classList.add('hidden');
+        }
+
+        // Mobile Menu Toggle
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
         });
 
-        // Contact Form Submission Mock
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            const successModal = document.getElementById('form-success');
-            successModal.classList.remove('hidden');
-        }
-
-        function resetForm() {
-            const form = document.getElementById('partner-form');
-            const successModal = document.getElementById('form-success');
-            form.reset();
-            successModal.classList.add('hidden');
-        }
+        // Initialize default tab
+        switchEngine('evidence');
     </script>
 </body>
 </html>
